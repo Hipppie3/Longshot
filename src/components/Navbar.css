@@ -1,0 +1,72 @@
+/* Navbar container */
+.navbar_container {
+ display: flex;
+ justify-content: space-between;
+ /* Longshot on the left, links on the right */
+ align-items: center;
+ /* Vertical alignment */
+ padding: 0 40px;
+ height: 80px;
+ background-color: white;
+ width: 100%;
+ position: sticky;
+ top: 0;
+ left: 0;
+ z-index: 1000;
+}
+
+/* Anchor links */
+.navbar_container a {
+ text-decoration: none;
+ color: black;
+ font-weight: bold;
+ padding: 5px 0;
+}
+
+/* List container */
+.navbar_links ul {
+ display: flex;
+ /* Align list items horizontally */
+ list-style: none;
+ /* Remove bullet points */
+ margin: 0;
+ /* Reset margins */
+ padding: 0;
+ /* Reset padding */
+}
+
+/* Individual list items */
+.navbar_links li {
+ margin: 0 10px;
+ font-size: 14px;
+ font-family: Arial;
+}
+
+
+/* Active link styling */
+.active_link {
+ text-decoration: none;
+ /* Fallback in case of cascading issues */
+ border-bottom: 2px solid black;
+ /* Creates a visible underline */
+ color: black;
+}
+
+/* Inactive link styling */
+.inactive_link {
+ text-decoration: none;
+ color: black;
+}
+
+.longshot {
+ font-size: 40px;
+ font-family:'Courier New', Courier, monospace;
+ letter-spacing: 1px;
+ margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+ .longshot {
+  font-size: 20px;
+ }
+}

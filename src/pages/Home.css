@@ -1,0 +1,111 @@
+.homepage {
+ font-family: Arial, sans-serif;
+}
+
+/* Section 1: Fullscreen Video */
+.video_section {
+ height: 100vh;
+ /* Full viewport height */
+ width: 100%;
+ overflow: hidden;
+ position: relative;
+ background-color: white;
+}
+
+.video_section video {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ /* Ensures the video covers the entire section */
+}
+
+/* Section 2: Work Section (150vh) */
+.work_section {
+ height: 180vh;
+ /* Total height of the work section */
+ display: flex;
+ flex-direction: column;
+}
+
+.work_top {
+ height: 120px;
+ display: flex;
+ justify-content: center;
+ align-items: flex-end;
+ font-size: 32px;
+ font-family: Arial, Helvetica, sans-serif;
+ padding-bottom: 24px;
+ transform: scaleY(1.6);
+ line-height: normal;
+ letter-spacing: 1px;
+}
+
+
+
+.work_middle {
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ width: 100%
+}
+
+.work_item {
+ display: flex;
+ flex: 1;
+ width: 100%;
+ height: 100px;
+ overflow: hidden;
+ position: relative;
+}
+
+.work_item:first-child { 
+ background-color: red;
+}
+
+.work_item:nth-child(2) {
+ background-color: yellow;
+}
+
+.work_item:nth-child(3) {
+ background-color: orange;
+}
+
+.work_item:last-child {
+ background-color: green;
+}
+
+
+.work_bottom {
+ height: 160px;
+ background-color: black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+/* Section 3: Info Section (240px) */
+.info_section {
+ height: 460px;
+ background-color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: black
+}
+
+.info_content {
+ font-size: 20px;
+ font-weight: bold;
+}
+
+/* Section 4: Footer Section (80px) */
+.footer_section {
+ height: 160px;
+ background-color: black;
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
