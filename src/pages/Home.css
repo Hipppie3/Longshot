@@ -19,93 +19,62 @@
  /* Ensures the video covers the entire section */
 }
 
-/* Section 2: Work Section (150vh) */
-.work_section {
- height: 180vh;
- /* Total height of the work section */
- display: flex;
- flex-direction: column;
-}
-
-.work_top {
- height: 120px;
- display: flex;
- justify-content: center;
- align-items: flex-end;
- font-size: 32px;
- font-family: Arial, Helvetica, sans-serif;
- padding-bottom: 24px;
- transform: scaleY(1.6);
- line-height: normal;
- letter-spacing: 1px;
-}
-
-
-
-.work_middle {
- flex: 1;
- display: flex;
- flex-direction: column;
- justify-content: space-evenly;
- align-items: center;
- width: 100%
-}
-
-.work_item {
- display: flex;
- flex: 1;
+.image-container {
  width: 100%;
- height: 100px;
- overflow: hidden;
  position: relative;
-}
-
-.work_item:first-child { 
- background-color: red;
-}
-
-.work_item:nth-child(2) {
- background-color: yellow;
-}
-
-.work_item:nth-child(3) {
- background-color: orange;
-}
-
-.work_item:last-child {
- background-color: green;
-}
-
-
-.work_bottom {
- height: 160px;
+ /* To contain the absolutely positioned caption */
  background-color: black;
- display: flex;
- justify-content: center;
- align-items: center;
+ overflow: hidden;
+ margin: 0;
+ padding: 0;
+ aspect-ratio: 18/ 7;
+    /* ✅ Force a consistent aspect ratio */
+}
+.image-container2 {
+ width: 100%;
+ position: relative;
+ /* To contain the absolutely positioned caption */
+ background-color: black;
+ overflow: hidden;
+ margin: 0;
+ padding: 0;
+ aspect-ratio: 18/ 7;
+ /* ✅ Force a consistent aspect ratio */
 }
 
-/* Section 3: Info Section (240px) */
-.info_section {
- height: 460px;
- background-color: white;
- display: flex;
- justify-content: center;
- align-items: center;
- color: black
+.image-container img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ /* Crop to fill the container without distortion */
+ object-position: 30% ;
+ /* Center the image content */
+ display: block;
+ filter: sepia(30%) contrast(90%) brightness(85%) saturate(80%) grayscale(20%);
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ /* Adds depth like an old photo */
+}
+.image-container2 img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ /* Crop to fill the container without distortion */
+ object-position: center top;
+ /* Center the image content */
+ display: block;
+ filter: sepia(30%) contrast(90%) brightness(85%) saturate(80%) grayscale(20%);
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ /* Adds depth like an old photo */
 }
 
-.info_content {
- font-size: 20px;
+.image-caption {
+ position: absolute;
+ bottom: 3px;
+ left: 20px;
+ color: #e4e2e2;
+ font-size: 2vw;
  font-weight: bold;
-}
-
-/* Section 4: Footer Section (80px) */
-.footer_section {
- height: 160px;
- background-color: black;
- color: white;
- display: flex;
- justify-content: center;
- align-items: center;
+ border-radius: 4px;
+ z-index: 1;
+ white-space: nowrap;
 }

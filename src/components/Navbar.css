@@ -7,18 +7,25 @@
  /* Vertical alignment */
  padding: 0 40px;
  height: 80px;
- background-color: white;
+ background-color: transparent;
  width: 100%;
- position: sticky;
+ position: relative;
  top: 0;
  left: 0;
  z-index: 1000;
 }
 
+.navbar_container.black-bg {
+ background-color: black;
+ /* Solid black for the /work page */
+ color: white ;
+ /* Optional: Adjust text color if needed */
+}
+
 /* Anchor links */
 .navbar_container a {
  text-decoration: none;
- color: black;
+ color: inherit;
  font-weight: bold;
  padding: 5px 0;
 }
@@ -47,15 +54,15 @@
 .active_link {
  text-decoration: none;
  /* Fallback in case of cascading issues */
- border-bottom: 2px solid black;
+ border-bottom: 2px solid currentColor;
  /* Creates a visible underline */
- color: black;
+ color: inherit;
 }
 
 /* Inactive link styling */
 .inactive_link {
  text-decoration: none;
- color: black;
+ color: inherit;
 }
 
 .longshot {
@@ -63,6 +70,7 @@
  font-family:'Courier New', Courier, monospace;
  letter-spacing: 1px;
  margin-left: 1rem;
+ color: inherit;
 }
 
 @media (max-width: 768px) {
