@@ -2,6 +2,8 @@ import React from 'react'
 import './Home.css'
 import vw from '../public/vw.png'
 import jewelry from '../public/jewelry.png'
+import color from '../public/color.png'
+import cars from '../public/carVideo.mp4'
 import { NavLink } from 'react-router-dom'
 
 function Home() {
@@ -9,24 +11,40 @@ function Home() {
   <div className='homepage'>
       {/* Section 1: Fullscreen Video */}
       <section className='video_section'>
-        <video src='' autoPlay loop muted></video>
+        <video src={cars} autoPlay loop muted></video>
       </section>
-    <div className="image-container">
-      <NavLink to='/image/vw'>
-      <div className="image-caption">Volkswagon Vehicle</div>
-      <img src={vw} alt="vw" />
+    <section className="featured-projects">
+  <h2>Featured Work</h2>
+  <div className="project-grid">
+    <div className="project-card">
+      <NavLink to="/image/jewelry" className="project-link">
+        <img src={jewelry} alt="Jewelry Shoot" />
+        <div className="project-info">
+          <h3>Jewelry Shoot</h3>
+        </div>
       </NavLink>
     </div>
-    <div className="image-container2">
-      <NavLink to='/image/jewelry'>
-      <div className="image-caption">Jewelry</div>
-      <img src={jewelry} alt="Jewelry"/>
+
+    <div className="project-card">
+      <NavLink to="/image/vw" className="project-link">
+        <img src={vw} alt="Volkswagen Promo" />
+        <div className="project-info">
+          <h3>Automobile Promo</h3>
+        </div>
       </NavLink>
     </div>
-    <div className="image-container">
-      <div className="image-caption">Volkswagon Vehicle</div>
-      <img src={vw} alt="Martha Stewart - Mercedes Benz" />
+
+    <div className="project-card">
+          <NavLink to="/image/color" className="project-link">
+      <img src={color} alt="Lifestyle Setup" className="shift-down" />
+      <div className="project-info">
+        <h3>Sofa Scene</h3>
+      </div>
+      </NavLink>
     </div>
+  </div>
+</section>
+
   </div>
   )
 }

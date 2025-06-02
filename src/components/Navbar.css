@@ -6,19 +6,26 @@
  align-items: center;
  /* Vertical alignment */
  padding: 0 40px;
- height: 80px;
- background-color: transparent;
+ height: 100px;
  width: 100%;
- position: relative;
+
+ position: fixed;
+ /* Keeps navbar at the top */
  top: 0;
  left: 0;
- z-index: 1000;
+
+ background-color: rgba(0, 0, 0, 0);
+ /* Ensure transparency */
+ color: white;
+ /* Ensure text is visible */
+ z-index: 100;
+
 }
 
 .navbar_container.black-bg {
- background-color: black;
+
  /* Solid black for the /work page */
- color: white ;
+ color: black;
  /* Optional: Adjust text color if needed */
 }
 
@@ -66,15 +73,65 @@
 }
 
 .longshot {
- font-size: 40px;
- font-family:'Courier New', Courier, monospace;
+ font-size: 30px;
+ font-family: 'Courier New', Courier, monospace;
  letter-spacing: 1px;
  margin-left: 1rem;
  color: inherit;
 }
 
+.menuOpen,
+.menuClose {
+ display: none;
+}
+
 @media (max-width: 768px) {
- .longshot {
-  font-size: 20px;
+ .navbar_links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 100;
+  height: 200px;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+     overflow: hidden;
+     max-height: 0;
+     opacity: 0;
  }
+
+ .navbar_links.open {
+  display: flex;
+  max-height: 300px;
+  opacity: 1;
+ }
+
+ .navbar_links ul {
+  flex-direction: column;
+ }
+
+ .navbar_links li {
+  margin: 15px 0;
+  color: white;
+ }
+
+ .navbar_container a {
+  font-size: 18px;
+ }
+
+    .menuOpen,
+    .menuClose {
+     display: block;
+     background-color: transparent;
+     border: none;
+     position: absolute;
+     top: 30px;
+     right: 20px;
+     cursor: pointer;
+     z-index: 110;
+    }
 }

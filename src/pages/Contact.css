@@ -1,0 +1,28 @@
+.contact-page {
+ padding: 4rem 2rem;
+ background-color: white;
+ color: black;
+ text-align: center;
+ min-height: 100vh;
+ align-content: center;
+}
+
+.contact-page h2 {
+ font-size: 2.5rem;
+ margin-bottom: 2rem;
+ 
+}
+
+.contact-page p {
+ font-size: 1.2rem;
+ margin: 1rem 0;
+}
+
+.contact-page a {
+ color: #00aaff;
+ text-decoration: none;
+}
+
+.contact-page a:hover {
+ text-decoration: underline;
+}

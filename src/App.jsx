@@ -7,11 +7,13 @@ import About from './pages/About'
 import Work from './pages/Work'
 import Contact from './pages/Contact'
 import ImageDetail from './pages/ImageDetail'
+import Footer from './pages/Footer'
 
 function App() {
   return (
-    <div>
+    <div className="app-wrapper">
       <Navbar />
+      <div className="main-content">
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
@@ -19,7 +21,10 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path="/image/:id" element={<ImageDetail />} /> {/* Dynamic Route */}
       </Routes>
+
     </div>
+          <Footer />
+          </div>
   )
 }
 

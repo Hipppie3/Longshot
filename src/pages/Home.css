@@ -27,7 +27,7 @@
  overflow: hidden;
  margin: 0;
  padding: 0;
- aspect-ratio: 18/ 7;
+ aspect-ratio: 18/6;
     /* ✅ Force a consistent aspect ratio */
 }
 .image-container2 {
@@ -38,8 +38,16 @@
  overflow: hidden;
  margin: 0;
  padding: 0;
- aspect-ratio: 18/ 7;
+ aspect-ratio: 18/ 5;
  /* ✅ Force a consistent aspect ratio */
+}
+.image-container3 {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 18/5;
 }
 
 .image-container img {
@@ -47,24 +55,32 @@
  height: 100%;
  object-fit: cover;
  /* Crop to fill the container without distortion */
- object-position: 30% ;
+ object-position: 30% 0%;
  /* Center the image content */
  display: block;
- filter: sepia(30%) contrast(90%) brightness(85%) saturate(80%) grayscale(20%);
+ /* filter: sepia(30%) contrast(90%) brightness(85%) saturate(80%) grayscale(20%); */
  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
  /* Adds depth like an old photo */
 }
 .image-container2 img {
- width: 100%;
- height: 100%;
- object-fit: cover;
- /* Crop to fill the container without distortion */
- object-position: center top;
- /* Center the image content */
- display: block;
- filter: sepia(30%) contrast(90%) brightness(85%) saturate(80%) grayscale(20%);
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
- /* Adds depth like an old photo */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% 50%;
+    /* Moves the image 70% to the right */
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.image-container3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Crop to fill the container without distortion */
+    object-position: center top;
+    /* Center the image content */
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adds depth like an old photo */
 }
 
 .image-caption {
@@ -73,8 +89,74 @@
  left: 20px;
  color: #e4e2e2;
  font-size: 2vw;
- font-weight: bold;
  border-radius: 4px;
  z-index: 1;
  white-space: nowrap;
+
+}
+.featured-projects {
+    padding: 4rem 2rem;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-card img {
+    width: 100%;
+    height: 400px;
+    /* 👈 force consistent height */
+    object-fit: cover;
+    /* 👈 crop and fill container */
+    object-position: center center;
+    display: block;
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-info h3 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1.2rem;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.project-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.project-link:hover {
+    opacity: 0.85;
+}
+
+.shift-down {
+    object-position: center 10% !important;
+    /* 👈 tweak % to shift vertically */
 }
